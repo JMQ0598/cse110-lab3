@@ -1,6 +1,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - master
+        - circleci_test
     working_directory: ~/code
     docker:
       - image: circleci/android:api-27
